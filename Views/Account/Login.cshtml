@@ -1,0 +1,29 @@
+@model webappmvcasp.Models.User
+
+@{
+    ViewData["Title"] = "Đăng Nhập";
+}
+<style>
+    .wrapper-dangnhap{
+        margin: 0 auto;
+        background-color: azure;
+        padding: 5rem;
+        }
+</style>
+<div class="wrapper-dangnhap ">
+    <h1 class="text-center text-danger">Đăng Nhập</h1>
+    <form asp-action="Login" method="post">
+        <div class="form-group mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input asp-for="Email" class="form-control" required />
+        </div>
+        <div class="form-group mb-3">
+            <label for="password" class="form-label">Mật khẩu:</label>
+            <input asp-for="Password" class="form-control" type="password" required />
+        </div>
+        <div class="d-flex justify-content-between align-items-center gap-2">
+            <button type="submit" class="btn btn-primary">Đăng Nhập</button>
+          <a href="/Account/Register">Đăng Ký</a>
+        </div>
+    </form>
+</div>
